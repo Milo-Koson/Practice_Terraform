@@ -1,0 +1,14 @@
+# Terraform state
+*.tfstate
+*.tfstate.backup
+
+# Crash logs
+crash.log
+
+# Terraform CLI data
+.terraform/
+.terraform.lock.hcl
+
+# Local variable overrides
+terraform.tfvars
+*.tfvars
