@@ -1,3 +1,4 @@
+---
 name: Terraform CI
 
 on:
@@ -35,6 +36,7 @@ jobs:
         run: terraform validate
 
       - name: Terraform Plan
-        run: terraform plan -input=false \
-          -var="ami_id=${{ secrets.AMI_ID }}" \
-          -var="key_name=${{ secrets.KEY_NAME }}"
+        run: |
+          terraform plan -input=false \
+            -var="ami_id=${{ secrets.AMI_ID }}" \
+            -var="key_name=${{ secrets.KEY_NAME }}"
